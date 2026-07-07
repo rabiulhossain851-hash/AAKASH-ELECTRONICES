@@ -1,58 +1,214 @@
-<section class="hero">
-    <div class="hero-text">
-        <h1>AKASH ELECTRONICS</h1>
-        <h2>India's Trusted Electronics Store</h2>
-        <p>Refrigerator | Air Conditioner | Washing Machine | TV | Spare Parts</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Electronics - Best Electronics Store</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <a href="https://wa.me/919093664453" class="buy-btn">
-            Order on WhatsApp
-        </a>
-    </div>
+    <!-- Top Offer Banner -->
+    <section class="offer-banner">
+        <div class="offer-text">
+            🎉 GRAND OPENING OFFER | UP TO 40% OFF ON REFRIGERATORS, AC & TV | FREE HOME DELIVERY 🚚 | CALL: 9093664453
+        </div>
+    </section>
 
-    <div class="hero-image">
-        <img src="60_3_35.jpg" alt="Haier Refrigerator">
-    </div>
-</section>
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:60px;
-background:linear-gradient(135deg,#004aad,#0099ff);
-color:white;
-flex-wrap:wrap;
-}
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="logo">
+            <h1>AKASH ELECTRONICS</h1>
+            <p>Authorized Electronics Store</p>
+        </div>
+        <nav class="menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-.hero-text{
-max-width:500px;
-}
+    <!-- Search Box Section -->
+    <section class="search-box-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Search Products (e.g., Haier, Refrigerator)...">
+        </div>
+    </section>
 
-.hero h1{
-font-size:50px;
-margin-bottom:10px;
-}
+    <!-- Hero Image Slider Section -->
+    <section class="slider">
+        <img src="Haier-Range-of-Refrigerators-5-Star-DC.jpg" class="slide active" alt="Haier Showcase Banner">
+        <img src="Haier-Phoenix-Direct-Cool-Glass-Door-refrigerators.jpg" class="slide" alt="Haier Premium Glass Door">
+        <img src="FI3555_Ref_20_20New_20Lumiere_20HRB700KGU1_1.webp" class="slide" alt="Modern Refrigerator Banner">
+        
+        <!-- Slider Navigation Buttons -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
 
-.hero h2{
-font-size:28px;
-margin-bottom:20px;
-}
+    <!-- Category Section -->
+    <section class="categories">
+        <h2>Shop By Category</h2>
+        <div class="category-grid">
+            <div class="category-item" onclick="filterCategory('all')">All Products</div>
+            <div class="category-item" onclick="filterCategory('refrigerator')">Refrigerators</div>
+            <div class="category-item" onclick="filterCategory('ac')">Air Conditioners</div>
+            <div class="category-item" onclick="filterCategory('tv')">Smart TV</div>
+        </div>
+    </section>
 
-.hero p{
-font-size:18px;
-margin-bottom:25px;
-}
+    <!-- Products Grid Section -->
+    <section class="products-section">
+        <h2>Featured Products</h2>
+        <div class="products-grid" id="productsGrid">
 
-.buy-btn{
-background:#25D366;
-padding:15px 35px;
-border-radius:50px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
+            <!-- Product 1 -->
+            <div class="product-card" data-category="refrigerator">
+                <span class="discount">40% OFF</span>
+                <img src="61QfF88+lRL._SX466_.jpg" alt="Haier Refrigerator Single Door">
+                <div class="product-info">
+                    <h3>Haier 190L 4-Star Direct-Cool Refrigerator</h3>
+                    <p class="price"><span class="original-price">₹24,990</span> ₹16,490</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20190L%20Refrigerator" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-.hero-image img{
-width:420px;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.3);
-}
+            <!-- Product 2 -->
+            <div class="product-card" data-category="refrigerator">
+                <span class="discount">35% OFF</span>
+                <img src="61re0wN3aoL._SX466_.jpg" alt="Haier Double Door Refrigerator">
+                <div class="product-info">
+                    <h3>Haier 258L 3-Star Inverter Double Door</h3>
+                    <p class="price"><span class="original-price">₹34,000</span> ₹23,490</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20258L%20Double%20Door" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="refrigerator">
+                <span class="discount">Top Dealer</span>
+                <img src="FI3555_Ref_20_20New_20Lumiere_20HRB700KGU1_1.webp" alt="Haier Luxury Side-by-Side">
+                <div class="product-info">
+                    <h3>Haier Side-by-Side Premium Refrigerator</h3>
+                    <p class="price"><span class="original-price">₹95,000</span> ₹64,999</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20Side-by-Side%20Refrigerator" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="refrigerator">
+                <span class="discount">Best Seller</span>
+                <img src="haier-hrd-2263-1000x1000.webp" alt="Haier HRD 2263">
+                <div class="product-info">
+                    <h3>Haier HRD-2263 Direct Cool Refrigerator</h3>
+                    <p class="price"><span class="original-price">₹22,400</span> ₹15,200</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20HRD-2263" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="refrigerator">
+                <img src="Haier-Phoenix-Direct-Cool-Glass-Door-refrigerators.jpg" alt="Haier Phoenix Glass Door">
+                <div class="product-info">
+                    <h3>Haier Phoenix Direct Cool Glass Door</h3>
+                    <p class="price"><span class="original-price">₹28,990</span> ₹19,990</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20Phoenix%20Glass%20Door" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="refrigerator">
+                <img src="images (1).jpg" alt="Haier Compact Refrigerator">
+                <div class="product-info">
+                    <h3>Haier Compact Single Door Refrigerator</h3>
+                    <p class="price"><span class="original-price">₹18,500</span> ₹12,400</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20Compact%20Refrigerator" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card" data-category="refrigerator">
+                <img src="images (2).jpg" alt="Haier Modern Steel Finish">
+                <div class="product-info">
+                    <h3>Haier Frost Free Double Door - Steel Finish</h3>
+                    <p class="price"><span class="original-price">₹38,000</span> ₹26,500</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20Frost%20Free%20Steel" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card" data-category="refrigerator">
+                <img src="images.jpg" alt="Haier Classic Refrigerator">
+                <div class="product-info">
+                    <h3>Haier Classic Direct-Cool Refrigerator</h3>
+                    <p class="price"><span class="original-price">₹19,000</span> ₹13,990</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20Classic%20Refrigerator" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card" data-category="refrigerator">
+                <img src="screenshot-2023-06-17-13-28-53-500x500.webp" alt="Haier Smart Series">
+                <div class="product-info">
+                    <h3>Haier Smart Inverter Refrigerator</h3>
+                    <p class="price"><span class="original-price">₹31,500</span> ₹21,990</p>
+                    <div class="actions">
+                        <a href="https://wa.me/919093664453?text=Hi%20Akash%20Electronics,%20I%20want%20to%20order%20Haier%20Smart%20Inverter" target="_blank" class="btn whatsapp-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Floating Quick Call Button -->
+    <a href="tel:9093664453" class="floating-call">
+        <i class="fa-solid fa-phone"></i> Call Now
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Akash Electronics | Gandhi More, Bethuadahari, Nadia, WB (741126)</p>
+        <p>Developed for Easy Local Shopping</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
