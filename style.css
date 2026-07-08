@@ -7,13 +7,13 @@
 }
 
 body {
-    background-color: #f4f6f9;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
 /* Top Offer Banner */
 .offer-banner {
-    background-color: #ff3b30;
+    background-color: #e63946; /* আকর্ষণীয় লাল রঙ অফারের জন্য */
     color: white;
     text-align: center;
     padding: 10px;
@@ -33,39 +33,44 @@ body {
     100% { transform: translateX(-100%); }
 }
 
-/* Header & Navigation */
+/* ======================================================== */
+/* HEADER & NAVIGATION (নতুন প্রিমিয়াম কালার এখানে দেওয়া হয়েছে) */
+/* ======================================================== */
 .header {
-    background-color: #003366;
+    background-color: #1a1d20; /* প্রিমিয়াম ডার্ক চারকোল কালার */
     color: white;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    border-bottom: 3px solid #ffc107; /* নিচের বর্ডার গোল্ডেন কালার */
 }
 
 .logo h1 {
     font-size: 24px;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 .logo p {
     font-size: 12px;
-    color: #ffcc00;
+    color: #ffc107; /* গোল্ডেন ইয়োলো টেক্সট */
 }
 
 .menu a {
-    color: white;
+    color: #f8f9fa;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
+    transition: 0.3s;
 }
 
 .menu a.active, .menu a:hover {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #ffc107; /* হোভার করলে গোল্ডেন ব্যাকগ্রাউন্ড */
+    color: #1a1d20;
 }
 
 /* Search Box Section */
@@ -78,20 +83,18 @@ body {
     width: 100%;
     max-width: 600px;
     padding: 12px 20px;
-    border: 2px solid #003366;
+    border: 2px solid #1a1d20;
     border-radius: 25px;
     font-size: 16px;
     outline: none;
 }
 
-/* ======================================================== */
-/* HERO IMAGE SLIDER (এখানেই বড় ছবির প্রবলেম ফিক্স করা হয়েছে) */
-/* ======================================================== */
+/* HERO IMAGE SLIDER */
 .slider {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* মেইন বক্সের সাইজ */
-    height: 400px;     /* কম্পিউটারের জন্য স্ট্যান্ডার্ড হাইট */
+    max-width: 1200px;
+    height: 400px;
     margin: 0 auto 30px auto;
     overflow: hidden;
     border-radius: 8px;
@@ -105,8 +108,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* ছবি না কেটে বক্সের ভেতর সুন্দর ফিট করবে */
-    background-color: #fcfcfc; /* ছবির আশেপাশে ফাকা থাকলে ব্যাকগ্রাউন্ড ম্যাচ করবে */
+    object-fit: contain;
+    background-color: #fcfcfc;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -120,7 +123,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 51, 102, 0.7);
+    background-color: rgba(26, 29, 32, 0.8);
     color: white;
     border: none;
     padding: 12px 16px;
@@ -135,19 +138,16 @@ body {
 .next { right: 15px; }
 
 .prev:hover, .next:hover {
-    background-color: #ffcc00;
-    color: #003366;
+    background-color: #ffc107;
+    color: #1a1d20;
 }
 
-/* মোবাইল ফোনের জন্য স্লাইডার ছোট করার কোড */
 @media (max-width: 768px) {
     .slider {
-        height: 220px; /* মোবাইলে স্লাইডার বক্সের পারফেক্ট হাইট */
+        height: 220px;
         margin: 0 10px 20px 10px;
     }
 }
-
-/* ======================================================== */
 
 /* Category Section */
 .categories {
@@ -156,7 +156,7 @@ body {
 }
 
 .categories h2, .products-section h2 {
-    color: #003366;
+    color: #1a1d20;
     margin-bottom: 20px;
 }
 
@@ -179,7 +179,7 @@ body {
 }
 
 .category-item:hover {
-    background-color: #003366;
+    background-color: #1a1d20;
     color: white;
 }
 
@@ -209,7 +209,7 @@ body {
 }
 
 .product-card:hover {
-    transform: translateY(-50%);
+    transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
@@ -217,7 +217,7 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #ff3b30;
+    background-color: #e63946;
     color: white;
     padding: 4px 8px;
     font-size: 12px;
@@ -249,7 +249,7 @@ body {
 .price {
     font-size: 18px;
     font-weight: bold;
-    color: #ff3b30;
+    color: #e63946;
     margin-bottom: 15px;
 }
 
@@ -283,7 +283,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #003366;
+    background-color: #1a1d20;
     color: white;
     padding: 12px 20px;
     border-radius: 30px;
@@ -293,13 +293,19 @@ body {
     z-index: 100;
 }
 
+.floating-call:hover {
+    background-color: #ffc107;
+    color: #1a1d20;
+}
+
 /* Footer */
 .footer {
-    background-color: #003366;
+    background-color: #1a1d20;
     color: white;
     text-align: center;
     padding: 30px 20px;
     font-size: 14px;
+    border-top: 3px solid #ffc107;
 }
 
 .footer p {
